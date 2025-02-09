@@ -5,7 +5,6 @@
 		<a href="#horaires" class="bouton-menu">Horaires</a>&nbsp;|
 		<a href="#localisation" class="bouton-menu">Localisation</a>&nbsp;|
 		<a href="#evenements" class="bouton-menu">Événements</a>
-
 	</div>
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -366,7 +365,8 @@ export default {
 				const response = await axios.get(rootUrl + 'backend/vue/accueil.php/posts');
 
 				this.posts = response.data;
-				const nomEvenement = "Saint_Valentin_2025"; 
+				const nomEvenement = "Saint_Valentin_2025";
+
 				this.posts.forEach(post => {
 					if (post.nom == nomEvenement) {
 						const date_debut = post.date_debut !== '0000-00-00' ? new Date(post.date_debut.replace(' ', 'T')) : null;

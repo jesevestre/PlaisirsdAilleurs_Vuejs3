@@ -4,8 +4,8 @@
 			<div v-if="loading">Chargement en cours ...</div>
 			<div v-if="error" class="error">{{ error }}</div>
 			<ul v-if="posts.length > 0">
-				<li v-for="post in posts" :key="post.id_commande">
-					{{ post.id_commande }}
+				<li v-for="post in posts" :key="post.id">
+					{{ post.nom }}
 				</li>
 			</ul>
 			<div v-else-if="!loading && !error">Aucun article trouvé.</div>
@@ -35,7 +35,7 @@ export default {
 
 			try {
 				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
-				const response = await axios.get(rootUrl + 'backend/vue/adminDasboard.php/posts');
+				const response = await axios.get(rootUrl + 'backend/vue/adminDashboard.php/posts');
 				
 				this.posts = response.data;
 			} catch (error) {
