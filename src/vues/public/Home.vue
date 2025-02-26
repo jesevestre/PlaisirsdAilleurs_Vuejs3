@@ -29,32 +29,25 @@
 					alt="image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/4.jpg"
-					alt="image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/4.jpg" alt="image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/5.jpg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/5.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/6.jpg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/6.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/7.jpg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/9.jpg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/9.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/10.jpeg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/10.jpeg" alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/11.jpg"
-					alt="Image de présentation du buffet">
+				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/11.jpg" alt="Image de présentation du buffet">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -68,11 +61,14 @@
 	</div>
 
 	<!-- Temporaire -->
-	<div v-if="afficher" class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 ml-sm-3" id="emporter">
+	<div v-if="afficher" class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 ml-sm-3" id="">
 		<div class="row">
 			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">❤️ Soirée Saint Valentin ❤️</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'bars']" class="mr-2" />
+						<h5 class="card-title mb-1">❤️ Soirée Saint Valentin ❤️</h5>
+					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Ouverture exeptionnelle le 14 février</h6>
 					<ul>
 						<li>
@@ -103,14 +99,17 @@
 	</div>
 	<!-- Temporaire -->
 
-	<div class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 mr-sm-3" id="menu">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="menu">
 		<div class="row">
 			<div class="col-sm-6 order-2 order-sm-1">
 				<img class="d-block w-100" src="@/assets/photosCaroussel/2.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">La carte</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'bars']" class="mr-2" />
+						<h5 class="card-title mb-1">La carte</h5>
+					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Repas du midi 14,90€</h6>
 					<h6 class="card-subtitle mb-2 text-muted">Samedi soir, weekend et jours feriés 23,90€</h6>
 					<h6 class="card-subtitle mb-2 text-muted">Label certifié <i>Frais Equilibre Santé</i></h6>
@@ -137,11 +136,14 @@
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 ml-sm-3" id="emporter">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="emporter">
 		<div class="row">
 			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">Commande à emporter</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'cart-shopping']" class="mr-2" />
+						<h5 class="card-title mb-1">Commande à emporter</h5>
+					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Le midi entre 11h30 et 14h30</h6>
 					<ul>
 						<li>
@@ -175,14 +177,17 @@
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 mr-sm-3" id="horaires">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="horaires">
 		<div class="row">
 			<div class="col-sm-6 order-2 order-sm-1">
 				<img class="d-block w-100" src="@/assets/photosCaroussel/1.jpg" alt="Image de présentation du buffet">
 			</div>
 			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">Horaires</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'clock']" class="mr-2" />
+						<h5 class="card-title mb-1">Horaires</h5>
+					</div>
 					<div class="row">
 						<div v-if="jourDeLaSemaine == 'lundi'" class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Lundi</h6>
@@ -255,11 +260,14 @@
 		</div>
 	</div>
 
-	<div class="container localisation d-flex flex-row pt-5 pb-5 mt-5 mb-5 ml-sm-3" id="localisation">
+	<div class="container localisation d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="localisation">
 		<div class="row">
 			<div class="little-card card col-11 col-sm-7" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title mb-4">Localisation</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'location-dot']" class="mr-2" />
+						<h5 class="card-title mb-1">Localisation</h5>
+					</div>
 					<h6 class="card-subtitle mb-2 text-muted mb-4">91140 Villebon-sur-Yvette,<br /> 4 Avenue de la
 						Baltique</h6>
 					<ul>
@@ -286,14 +294,17 @@
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 mr-sm-3" id="evenements">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="evenements">
 		<div class="row">
 			<div class="col-sm-6 order-2 order-sm-1">
 				<img class="d-block w-100" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
 			</div>
-			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
+			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">Événements</h5>
+					<div class="d-flex align-items-center pb-3">
+						<fa :icon="['fas', 'champagne-glasses']" class="mr-2" />
+						<h5 class="card-title mb-1">Événements</h5>
+					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Réservation pour des événements</h6>
 					<ul>
 						<li>

@@ -10,7 +10,7 @@
 						<a href="tel:+33625926100" class="slogan-button btn card-link text-white boutonVert">06 25 92 61 00</a>
 					</div>
 					<div class="mt-5 pb-5 mb-5">
-						<router-link class="btn btn-warning mb-5 pt-2 pb-2 pl-5 pr-5 text-white font-weight-bold boutonJaune" to="./">Retour</router-link>
+						<router-link class="btn btn-warning mb-5 pt-2 pb-2 pl-5 pr-5 text-white font-weight-bold boutonJaune" to="/">Retour</router-link>
 					</div>
 				</div>
 			</div>

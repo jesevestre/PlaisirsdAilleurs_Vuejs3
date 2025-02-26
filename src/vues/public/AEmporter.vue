@@ -382,7 +382,7 @@
 									</div>
 								</div>
 								<div class="col-12 pt-3">
-									<router-link to="./"><button
+									<router-link to="/"><button
 											class="btn btn-warning font-weight-bold text-white pl-5 pr-5">&nbsp;Retour&nbsp;</button></router-link>
 								</div>
 								<div class="col-0 col-lg-3 pt-3">

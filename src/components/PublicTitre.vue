@@ -1,6 +1,6 @@
 <template>
     <h1>
-        <fa icon="fan" /> Plaisirs d'Ailleurs
+        <img class="img_logo" src="/public/logo_plaisirsdailleurs.gif" alt="Logo PLaisirs d'Ailleurs"> Plaisirs d'Ailleurs
     </h1>
 </template>
 
@@ -20,6 +20,10 @@ h1 {
     padding-bottom: 20px;
 
     font-size: 3.5rem;
+}
+.img_logo {
+    margin-top: -10px;
+    width: 35px;
 }
 
 @media screen and (max-width: 575px) {
