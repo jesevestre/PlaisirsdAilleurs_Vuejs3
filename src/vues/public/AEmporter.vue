@@ -587,7 +587,7 @@ export default {
 					const envoyerCommande = async (commande) => {
 						try {
 							const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
-							const response = await axios.get(rootUrl + 'backend/controller/controller_addCommande.php/posts', commande,
+							const response = await axios.get(rootUrl + 'backend/controlleur/controlleur_addCommande.php/posts', commande,
 								{
 									headers: {
 										'Content-Type': 'application/json',

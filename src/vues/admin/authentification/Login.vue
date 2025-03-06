@@ -4,11 +4,10 @@
     <div class="container pb-5 mb-5">
         <form class="pb-5 mb-5" @submit.prevent="login">
             <div class="form-group row align-items-center mt-5 mx-sm-5">
-                <label for="text" class="col-4 col-form-label">Mot de passe: </label>
-                <div class="col-6">
+                <div class="col-8">
                     <input type="password" class="form-control-plaintext bg-white" id="password" placeholder="Mot de passe" v-model="admin.password"/>
                 </div>
-                <div class="col-2">
+                <div class="col-4">
                     <button type="submit" class="btn btn-primary mt-1 mb-1">Connexion</button>
                 </div>
             </div>

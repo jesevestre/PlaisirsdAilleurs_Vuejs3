@@ -1,11 +1,11 @@
 <template>
     <div class="admin">
-        UserAdd works!
+        GestionEvenements works!
     </div>
 </template>
 
 <script>
 export default {
-    name: 'UserAdd',
+    name: 'GestionEvenements',
 }
 </script>

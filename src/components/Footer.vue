@@ -1,7 +1,7 @@
 <template>
     <footer class="text-center footer">
 		<span>
-			<router-link style="color: white" to="/auth/Login">Accès admin</router-link>&nbsp;-&nbsp;
+			<router-link style="color: white" to="/authentification/Login">Accès admin</router-link>&nbsp;-&nbsp;
 		</span>
 		<span>
 			<img class="icone" src="@/assets/images/phoneBlanc.png" alt="Logo téléphone">&nbsp;<a style="color: white"

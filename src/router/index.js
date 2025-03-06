@@ -8,23 +8,22 @@ import NotFound from '@/vues/public/NotFound.vue';
 
 import AdminLayout from '@/vues/admin/AdminLayout.vue';
 import Dashboard from '@/vues/admin/Dashboard.vue'; 
-import UserIndex from '@/vues/admin/users/UserIndex.vue';
-import UserEdit from '@/vues/admin/users/UserEdit.vue';
-import UserAdd from '@/vues/admin/users/UserAdd.vue';
+import StatsVisiteurs from '@/vues/admin/StatsVisiteurs.vue';
+import GestionEvenements from '@/vues/admin/GestionEvenements.vue';
 
-import Login from '@/vues/admin/auth/Login.vue';
+import Login from '@/vues/admin/authentification/Login.vue';
 import { authGuard } from '@/_helpers/auth-guard.js';
 import { authGuardLogin } from '@/_helpers/auth-guard.js';
 
 const routes = [
 	{
-		path: '/',
+		path: '/public',
 		name: 'public',
 		component: PublicLayout,
 		children: [
 			{ path: '/', name: 'Home', component: Home },
-			{ path: '/Reservation', name: 'Reservation', component: Reservation },
-			{ path: '/AEmporter', name: 'AEmporter', component: AEmporter },
+			{ path: 'Reservation', name: 'Reservation', component: Reservation },
+			{ path: 'AEmporter', name: 'AEmporter', component: AEmporter },
 			{ path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 		]
 	},
@@ -34,14 +33,13 @@ const routes = [
 		component: AdminLayout,
 		children: [
 			{ path: 'Dashboard', name: 'Dashboard', component: Dashboard },
-			{ path: 'users/UserIndex', component: UserIndex },
-			{ path: 'users/UserEdit/:id(\\d+)', component: UserEdit, props: true },
-			{ path: 'users/UserAdd', component: UserAdd },
+			{ path: 'StatsVisiteurs', component: StatsVisiteurs },
+			{ path: 'GestionEvenements', component: GestionEvenements },
 			{ path: 'admin/:pathMatch(.*)*', component: Dashboard },
 		]
 	},
 	{
-		path: '/auth/Login', name: 'Login', component: Login,
+		path: '/authentification/Login', name: 'Login', component: Login,
 	},
 	{
 		path: '/:pathMatch(.*)*', redirect: '/'
@@ -68,7 +66,7 @@ router.beforeEach((to, form, next) => {
 // Redirection si token valide, on saute la connexion
 router.beforeEach((to, form, next) => {
 	if(to.matched[0].name == 'Login' && authGuardLogin() == true){
-		router.push('/admin/dashboard');
+		router.push('/admin/Dashboard');
 	}
 	next();
 })

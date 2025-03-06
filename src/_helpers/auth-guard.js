@@ -7,7 +7,7 @@ export function authGuard(to){
         return true;
     }
 
-    router.push('/auth/Login');
+    router.push('/authentification/Login');
 }
 
 export function authGuardLogin(to){

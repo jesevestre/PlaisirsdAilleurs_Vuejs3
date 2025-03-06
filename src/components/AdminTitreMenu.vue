@@ -1,13 +1,12 @@
 <template>
     <h1>
-        <fa icon="fan" /> Espace admin
+        <img class="img_logo" src="/public/logo_plaisirsdailleurs.gif" alt="Logo PLaisirs d'Ailleurs"> Espace admin
     </h1>
 
     <div class="menu-div">
-            <router-link class="bouton-menu" to="/admin/dashboard">Tableau de bord</router-link>&nbsp;|
-            <router-link class="bouton-menu" to="/admin/users/UserIndex">User list</router-link>&nbsp;|
-            <router-link class="bouton-menu" to="/admin/users/UserEdit/12">User edit</router-link>&nbsp;|
-            <router-link class="bouton-menu" to="/admin/users/UserAdd">User add</router-link>&nbsp;|
+            <router-link class="bouton-menu" to="/admin/Dashboard">Tableau de bord</router-link>&nbsp;|
+            <router-link class="bouton-menu" to="/admin/GestionEvenements">Gestion évenements</router-link>&nbsp;|
+            <router-link class="bouton-menu" to="/admin/StatsVisiteurs">Stats visiteurs</router-link>&nbsp;|
             <button class="bouton-menu" @click="logout()">Déconnexion</button>
         </div>
 </template>

@@ -1,11 +1,6 @@
 <template>
-	<div class="menu-div">
-		<a href="#menu" class="bouton-menu">La&nbsp;carte</a>&nbsp;|
-		<a href="#emporter" class="bouton-menu">À&nbsp;emporter</a>&nbsp;|
-		<a href="#horaires" class="bouton-menu">Horaires</a>&nbsp;|
-		<a href="#localisation" class="bouton-menu">Localisation</a>&nbsp;|
-		<a href="#evenements" class="bouton-menu">Événements</a>
-	</div>
+
+	<PublicMenu />
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -88,7 +83,7 @@
 						</li>
 					</ul>
 					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
+						<router-link to="/public/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
 					</div>
 				</div>
 			</div>
@@ -164,10 +159,10 @@
 						</li>
 					</ul>
 					<!-- <div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/AEmporter" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
+						<router-link to="/public/AEmporter" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
 					</div> -->
 					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/Reservation" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
+						<router-link to="/public/Reservation" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
 					</div>
 				</div>
 			</div>
@@ -327,7 +322,7 @@
 						</li>
 					</ul>
 					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
+						<router-link to="/public/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
 					</div>
 				</div>
 			</div>
@@ -338,12 +333,16 @@
 
 
 <script>
+import PublicMenu from '@/components/PublicMenu.vue';
 import { onMounted } from 'vue';
 /* Partie bdd */
 import axios from 'axios';
 
 export default {
 	name: 'Home',
+	components: {
+        PublicMenu,
+    },
 	setup() {
 		onMounted(() => {
 			const carouselElement = document.getElementById('carouselExampleIndicators');
@@ -365,8 +364,24 @@ export default {
 	},
 	mounted() {
 		this.fetchPosts();
+		this.enregistrerVisiteur();
 	},
 	methods: {
+		async enregistrerVisiteur() {
+			try {
+				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
+				await axios.get(rootUrl + 'backend/controlleur/controlleur_addVisiteur.php/posts',
+					{
+						headers: {
+							'Content-Type': 'application/json',
+						},
+					}
+				);
+			} catch (error) {
+				console.error('Erreur lors de l’enregistrement du visiteur :', error);
+			};
+		},
+
 		async fetchPosts() {
 			this.loading = true;
 			this.error = null;
@@ -419,24 +434,6 @@ export default {
 
 
 <style>
-.menu-div {
-	text-align: center;
-}
-.bouton-menu {
-	text-align: center;
-	color: #444;
-	border: none;
-	margin: 4px 2px;
-	outline: none;
-	font-size: 18px;
-	cursor: pointer;
-	text-decoration: none;
-}
-.bouton-menu:hover {
-	color: #777;
-	text-decoration: none !important;
-}
-
 .carousel-inner .carousel-item {
 	transition: transform 0.6s ease-in;
 }

@@ -1,12 +1,12 @@
 <template>
     <h1>
-        <fa icon="fan" /> Connexion
+        <img class="img_logo" src="/public/logo_plaisirsdailleurs.gif" alt="Logo PLaisirs d'Ailleurs"> Connexion
     </h1>
 </template>
 
 <script>
 export default {
-    name: 'PublicTitreCo',
+    name: 'AdminTitreCo',
 }
 </script>
 

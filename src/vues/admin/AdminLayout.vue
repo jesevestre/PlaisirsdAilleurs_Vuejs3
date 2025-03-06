@@ -47,7 +47,7 @@ export default {
         logout() {
             clearInterval(this.timer);
             accountService.logout();
-            this.$router.push("/auth/Login");
+            this.$router.push("/authentification/Login");
         },
     },
 

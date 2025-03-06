@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "mkdir .\\dist\\Reservation && cp .\\dist\\index.html .\\dist\\Reservation\\index.html && mkdir .\\dist\\AEmporter && cp .\\dist\\index.html .\\dist\\AEmporter\\index.html",
+    "postbuild": "mkdir .\\dist\\public\\Reservation && cp .\\dist\\index.html .\\dist\\public\\Reservation\\index.html && mkdir .\\dist\\public\\AEmporter && cp .\\dist\\index.html .\\dist\\public\\AEmporter\\index.html && mkdir .\\dist\\authentification\\Login && cp .\\dist\\index.html .\\dist\\authentification\\Login\\index.html && mkdir .\\dist\\admin\\Dashboard && cp .\\dist\\index.html .\\dist\\admin\\Dashboard\\index.html && mkdir .\\dist\\admin\\GestionEvenements && cp .\\dist\\index.html .\\dist\\admin\\GestionEvenements\\index.html && mkdir .\\dist\\admin\\StatsVisiteurs && cp .\\dist\\index.html .\\dist\\admin\\StatsVisiteurs\\index.html",
     "preview": "vite preview"
   },
   "dependencies": {

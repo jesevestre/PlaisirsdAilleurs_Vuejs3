@@ -1,13 +1,11 @@
 <template>
     <div class="admin">
-        UserEdit works!
-        <div>{{ id }}</div>
+        StatsVisiteurs works!
     </div>
 </template>
 
 <script>
 export default {
-    name: 'UserEdit',
-    props: ['id'],
+    name: 'StatsVisiteurs',
 }
 </script>
