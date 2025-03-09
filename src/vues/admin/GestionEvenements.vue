@@ -1,7 +1,5 @@
 <template>
-    <div class="admin">
-        GestionEvenements works!
-    </div>
+    GestionEvenements works!
 </template>
 
 <script>
