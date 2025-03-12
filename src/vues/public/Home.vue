@@ -56,7 +56,7 @@
 	</div>
 
 	<!-- Temporaire -->
-	<div v-if="afficher" class="container d-flex flex-row pt-5 pb-5 mt-5 mb-5 ml-sm-3" id="">
+	<div v-if="afficher" class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="">
 		<div class="row">
 			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
 				<div class="card-body">
@@ -255,7 +255,7 @@
 		</div>
 	</div>
 
-	<div class="container localisation d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="localisation">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3 localisation" id="localisation">
 		<div class="row">
 			<div class="little-card card col-11 col-sm-7" style="width: 18rem;">
 				<div class="card-body">
@@ -363,8 +363,8 @@ export default {
 		};
 	},
 	mounted() {
-		this.fetchPosts();
 		this.enregistrerVisiteur();
+		this.fetchPosts();
 	},
 	methods: {
 		async enregistrerVisiteur() {
