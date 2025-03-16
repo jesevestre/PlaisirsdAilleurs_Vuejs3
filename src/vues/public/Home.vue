@@ -106,7 +106,7 @@
 						<h5 class="card-title mb-1">La carte</h5>
 					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Repas du midi 14,90€</h6>
-					<h6 class="card-subtitle mb-2 text-muted">Samedi soir, weekend et jours feriés 23,90€</h6>
+					<h6 class="card-subtitle mb-2 text-muted">Soirs, weekends et jours feriés 23,90€</h6>
 					<h6 class="card-subtitle mb-2 text-muted">Label certifié <i>Frais Equilibre Santé</i></h6>
 					<ul>
 						<li>
@@ -153,7 +153,7 @@
 						<li>
 							5€ le panier de :
 								<ul>
-									<li>Accompagnegment</li>
+									<li>Accompagnement</li>
 									<li>Surpise</li>
 								</ul>
 						</li>
@@ -222,11 +222,11 @@
 
 						<div v-if="jourDeLaSemaine == 'vendredi'" class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Vendredi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30</p>
+							<p class="card-text font-weight-bold">11h30 - 14h30 / 19h - 22h</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6  class="card-subtitle mb-2 text-muted">Vendredi</h6>
-							<p class="card-text">11h30 - 14h30</p>
+							<p class="card-text">11h30 - 14h30 / 19h - 22h</p>
 						</div>
 
 						<div v-if="jourDeLaSemaine == 'samedi'" class="col-6 pb-3">
@@ -276,8 +276,7 @@
 							Accessible pour les personnes à mobilité réduite (PMR)
 						</li>
 					</ul>
-					<a href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir avec
-						Google Maps</a>
+					<a href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir Google Maps</a>
 				</div>
 			</div>
 			<div class="col-sm-5">
@@ -523,7 +522,7 @@ export default {
 	}
 
 	.localisation {
-		margin-bottom: 150px !important;
+		margin-bottom: 100px !important;
 	}
 
 	.card-map-iframe {
