@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import AdminTitreCo from '@/components/AdminTitreCo.vue';
+import AdminTitreCo from '@/components/admin/AdminTitreCo.vue';
 import PublicFooter from '@/components/Footer.vue';
 import { accountService } from '@/_services';
 
@@ -53,7 +53,7 @@ export default {
             if(this.admin.password == ''){
                 const access_token = Math.floor(Math.random() * 90000) + 10000000;
                 accountService.saveToken(access_token);
-                this.$router.push('/admin/Dashboard');
+                this.$router.push('/admin/GestionEvenement');
             } else {
                 const invalidDiv = document.getElementById('invalid');
                 invalidDiv.classList.add('d-block');

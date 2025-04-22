@@ -7,9 +7,8 @@ import AEmporter from '@/vues/public/AEmporter.vue';
 import NotFound from '@/vues/public/NotFound.vue';
 
 import AdminLayout from '@/vues/admin/AdminLayout.vue';
-import Dashboard from '@/vues/admin/Dashboard.vue'; 
 import StatsVisiteurs from '@/vues/admin/StatsVisiteurs.vue';
-import GestionEvenements from '@/vues/admin/GestionEvenements.vue';
+import GestionEvenement from '@/vues/admin/GestionEvenement.vue';
 
 import Login from '@/vues/admin/authentification/Login.vue';
 import { authGuard } from '@/_helpers/auth-guard.js';
@@ -32,10 +31,9 @@ const routes = [
 		name: 'admin',
 		component: AdminLayout,
 		children: [
-			{ path: 'Dashboard', name: 'Dashboard', component: Dashboard },
+			{ path: 'GestionEvenement', component: GestionEvenement },
 			{ path: 'StatsVisiteurs', component: StatsVisiteurs },
-			{ path: 'GestionEvenements', component: GestionEvenements },
-			{ path: 'admin/:pathMatch(.*)*', component: Dashboard },
+			{ path: 'admin/:pathMatch(.*)*', component: GestionEvenement },
 		]
 	},
 	{
@@ -66,7 +64,7 @@ router.beforeEach((to, form, next) => {
 // Redirection si token valide, on saute la connexion
 router.beforeEach((to, form, next) => {
 	if(to.matched[0].name == 'Login' && authGuardLogin() == true){
-		router.push('/admin/Dashboard');
+		router.push('/admin/GestionEvenement');
 	}
 	next();
 })

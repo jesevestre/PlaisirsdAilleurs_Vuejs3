@@ -1,7 +1,7 @@
 <template>
     <div class="admin">
 		<div>
-			<p><u>Evenements en base de données :</u></p>
+			<p><u>Evenement en base de données :</u></p>
 			<div v-if="loading">Chargement en cours ...</div>
 			<div v-if="error" class="error">{{ error }}</div>
 			<ul v-if="posts.length > 0">
@@ -19,7 +19,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'GestionEvenements',
+    name: 'GestionEvenement',
 
     data() {
 		return {
@@ -38,7 +38,7 @@ export default {
 
 			try {
 				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.posts ? `:${window.location.posts}` : ''}/`;
-				const response = await axios.get(rootUrl + 'backend/vue/adminEvenements.php/posts');
+				const response = await axios.get(rootUrl + 'backend/vue/adminEvenement.php/posts');
 				
 				this.posts = response.data;
 			} catch (error) {

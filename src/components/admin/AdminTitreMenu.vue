@@ -4,8 +4,7 @@
     </h1>
 
     <div class="menu-div">
-            <router-link class="bouton-menu" to="/admin/Dashboard">Tableau de bord</router-link>&nbsp;|
-            <router-link class="bouton-menu" to="/admin/GestionEvenements">Évenements</router-link>&nbsp;|
+            <router-link class="bouton-menu" to="/admin/GestionEvenement">Évenement</router-link>&nbsp;|
             <router-link class="bouton-menu" to="/admin/StatsVisiteurs">Statistiques</router-link>&nbsp;|
             <button class="bouton-menu" @click="logout()">Déconnexion</button>
         </div>

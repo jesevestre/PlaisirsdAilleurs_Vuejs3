@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import AdminTitreMenu from '@/components/AdminTitreMenu.vue';
+import AdminTitreMenu from '@/components/admin/AdminTitreMenu.vue';
 import PublicFooter from '@/components/Footer.vue';
 /* Gestion session expirée */
 import { accountService } from '@/_services';

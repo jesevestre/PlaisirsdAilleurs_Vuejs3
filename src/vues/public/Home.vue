@@ -62,24 +62,24 @@
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
 						<fa :icon="['fas', 'bars']" class="mr-2" />
-						<h5 class="card-title mb-1">❤️ Soirée Saint Valentin ❤️</h5>
+						<h5 class="card-title mb-1">{{ titre }}</h5>
 					</div>
-					<h6 class="card-subtitle mb-2 text-muted">Ouverture exeptionnelle le 14 février</h6>
+					<h6 class="card-subtitle mb-2 text-muted">{{ sousTitre }}</h6>
 					<ul>
 						<li>
-							À partir de 19h
+							{{ point1 }}
 						</li>
 						<li>
-							Une ambiance chaleureuse
+							{{ point2 }}
 						</li>
 						<li>
-							Musique d'ambiance
+							{{ point3 }}
 						</li>
 						<li>
-							Buffet à volonté 23,90€
+							{{ point4 }}
 						</li>
 						<li>
-							Possibilité de réserver
+							{{ point5 }}
 						</li>
 					</ul>
 					<div class="row h-0 justify-content-center align-items-center pt-2">
@@ -332,8 +332,9 @@
 
 
 <script>
-import PublicMenu from '@/components/PublicMenu.vue';
+import PublicMenu from '@/components/public/PublicMenu.vue';
 import { onMounted } from 'vue';
+
 /* Partie bdd */
 import axios from 'axios';
 
@@ -388,28 +389,23 @@ export default {
 			try {
 				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
 				const response = await axios.get(rootUrl + 'backend/vue/accueil.php/posts');
-
 				this.posts = response.data;
-				const nomEvenement = "Saint_Valentin_2025";
 
 				this.posts.forEach(post => {
-					if (post.nom == nomEvenement) {
-						const date_debut = post.date_debut !== '0000-00-00' ? new Date(post.date_debut.replace(' ', 'T')) : null;
-						const date_fin = post.date_fin !== '0000-00-00' ? new Date(post.date_fin.replace(' ', 'T')) : null;
-						const dateToday = new Date();
+					const date_debut = post.date_debut !== '0000-00-00' ? new Date(post.date_debut.replace(' ', 'T')) : null;
+					const date_fin = post.date_fin !== '0000-00-00' ? new Date(post.date_fin.replace(' ', 'T')) : null;
+					const dateToday = new Date();
 
-						if(date_debut && date_fin) {
-							if(date_debut <= dateToday && dateToday <= date_fin) {
-								afficher = true;
-							}
-						} else if (!date_debut && date_fin) {
-							if (dateToday <= date_fin) {
+					if(date_debut && date_fin) {
+						if((date_debut <= dateToday && dateToday <= date_fin)) {
+							this.titre = post.titre;
+							this.sousTitre = post.sousTitre;
+							this.point1 = post.point1;
+							this.point2 = post.point2;
+							this.point3 = post.point3;
+							this.point4 = post.point4;
+							this.point5 = post.point5;
 							this.afficher = true;
-							}
-						} else if (date_debut && !date_fin) {
-							if (date_debut <= dateToday) {
-							this.afficher = true;
-							}
 						}
 					}
 				});
@@ -420,7 +416,7 @@ export default {
 			}
 		},
 	},
-	name: 'JourActuel',
+
 	computed: {
 		jourDeLaSemaine() {
 			const jours = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];

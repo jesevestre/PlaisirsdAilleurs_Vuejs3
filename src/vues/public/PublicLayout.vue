@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import PublicTitreMenu from '@/components/PublicTitre.vue';
+import PublicTitreMenu from '@/components/public/PublicTitre.vue';
 import PublicFooter from '@/components/Footer.vue';
 
 export default {
