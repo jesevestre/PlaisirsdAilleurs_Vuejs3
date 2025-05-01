@@ -61,24 +61,24 @@
 			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'bars']" class="mr-2" />
+						<fa :icon="['fas', 'champagne-glasses']" class="mr-2" />
 						<h5 class="card-title mb-1">{{ titre }}</h5>
 					</div>
 					<h6 class="card-subtitle mb-2 text-muted">{{ sousTitre }}</h6>
 					<ul>
-						<li>
+						<li v-if="point1">
 							{{ point1 }}
 						</li>
-						<li>
+						<li v-if="point2">
 							{{ point2 }}
 						</li>
-						<li>
+						<li v-if="point3">
 							{{ point3 }}
 						</li>
-						<li>
+						<li v-if="point4">
 							{{ point4 }}
 						</li>
-						<li>
+						<li v-if="point5">
 							{{ point5 }}
 						</li>
 					</ul>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<img class="d-block w-100" src="@/assets/photosEvenements/Saint-Valentin.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100" :src="`/photosEvenements/${imageEvent}`" alt="Image de présentation du buffet">
 			</div>
 		</div>
 	</div>
@@ -356,7 +356,18 @@ export default {
 	/* Partie bdd */
 	data() {
 		return {
-			posts: [],
+			posts: {
+				titre: '',
+				sousTitre: '',
+				point1: '',
+				point2: '',
+				point3: '',
+				point4: '',
+				point5: '',
+				imageEvent: '',
+				date_debut: '',
+				date_fin: ''
+			},
 			loading: false,
 			error: null,
 			afficher: false,
@@ -405,6 +416,7 @@ export default {
 							this.point3 = post.point3;
 							this.point4 = post.point4;
 							this.point5 = post.point5;
+							this.imageEvent = post.imageEvent;
 							this.afficher = true;
 						}
 					}
