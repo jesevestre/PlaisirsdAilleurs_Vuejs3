@@ -2,63 +2,69 @@
 
 	<PublicMenu />
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"></button>
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/2.jpg"
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/2.jpg"
 					alt="image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/3.jpg"
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/3.jpg"
 					alt="image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/4.jpg" alt="image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/4.jpg"
+					alt="image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/5.jpg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/5.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/6.jpg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/6.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/7.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/9.jpg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/9.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/10.jpeg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/10.jpeg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="carousel-item">
-				<img class="img-redimensionnement d-block w-100" src="@/assets/photosCaroussel/11.jpg" alt="Image de présentation du buffet">
+				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/11.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="visually-hidden">Précédent</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+			<span class="visually-hidden">Suivant</span>
+		</button>
 	</div>
 
-	<!-- Temporaire -->
 	<div v-if="afficher" class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="">
 		<div class="row">
-			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
+			<div class="little-card-css card col-11 col-10 col-sm-6" style="width: 18rem;">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
 						<fa :icon="['fas', 'champagne-glasses']" class="mr-2" />
@@ -83,26 +89,27 @@
 						</li>
 					</ul>
 					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/public/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
+						<router-link to="/public/Reservation" class="button-css boutonVert-css">Réserver en cliquant
+							ici</router-link>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<img class="d-block w-100" :src="`/photosEvenements/${imageEvent}`" alt="Image de présentation du buffet">
+				<img class="d-block w-100" :src="`/photosEvenements/${imageEvent}`"
+					alt="Image de présentation du buffet">
 			</div>
 		</div>
 	</div>
-	<!-- Temporaire -->
 
-	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="menu">
-		<div class="row">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="menu">
+		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100" src="@/assets/photosCaroussel/2.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/2.jpg" alt="Image de présentation du buffet">
 			</div>
-			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
+			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'bars']" class="mr-2" />
+						<fa :icon="['fas', 'bars']" class="me-2" />
 						<h5 class="card-title mb-1">La carte</h5>
 					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Repas du midi 14,90€</h6>
@@ -125,62 +132,64 @@
 							Plancha
 						</li>
 					</ul>
-					<img class="icone" src="@/assets/images/phoneModif.png" alt="Logo téléphone">&nbsp;<a href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
+					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3" id="emporter">
-		<div class="row">
-			<div class="little-card card col-11 col-10 col-sm-6" style="width: 18rem;">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="emporter">
+		<div class="row justify-content-center">
+			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-1">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'cart-shopping']" class="mr-2" />
+						<fa :icon="['fas', 'cart-shopping']" class="me-2" />
 						<h5 class="card-title mb-1">Commande à emporter</h5>
 					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Le midi entre 11h30 et 14h30</h6>
 					<ul>
 						<li>
 							10€ le panier de :
-								<ul>
-									<li>Sushis</li>
-									<li>Fruits de mer</li>
-									<li>Poisson</li>
-									<li>Viande</li>
-								</ul>
+							<ul>
+								<li>Sushis</li>
+								<li>Fruits de mer</li>
+								<li>Poisson</li>
+								<li>Viande</li>
+							</ul>
 						</li>
 						<li>
 							5€ le panier de :
-								<ul>
-									<li>Accompagnement</li>
-									<li>Surpise</li>
-								</ul>
+							<ul>
+								<li>Accompagnement</li>
+								<li>Surpise</li>
+							</ul>
 						</li>
 					</ul>
 					<!-- <div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/public/AEmporter" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
+						<router-link to="/public/AEmporter" class="button-css boutonVert-css-css">Commander en cliquant ici</router-link>
 					</div> -->
-					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/public/Reservation" class="slogan-button boutonVert">Commander en cliquant ici</router-link>
+					<div class="row justify-content-center align-items-center pt-2">
+						<div class="col-auto">
+							<router-link to="/public/Reservation" class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span class="text-center">Commander&nbsp;en<br />&nbsp;cliquant&nbsp;ici</span></router-link>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6">
-				<img class="d-block w-100" src="@/assets/photosCaroussel/3.jpg" alt="Image de présentation du buffet">
+			<div class="col-sm-6 order-2 order-sm-2">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/3.jpg" alt="Image de présentation du buffet">
 			</div>
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="horaires">
-		<div class="row">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="horaires">
+		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100" src="@/assets/photosCaroussel/1.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/1.jpg" alt="Image de présentation du buffet">
 			</div>
-			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
+			<div class="card-css little-card-css card col-11 col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'clock']" class="mr-2" />
+						<fa :icon="['fas', 'clock']" class="me-2" />
 						<h5 class="card-title mb-1">Horaires</h5>
 					</div>
 					<div class="row">
@@ -189,7 +198,7 @@
 							<p class="card-text font-weight-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Lundi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Lundi</h6>
 							<p class="card-text">11h30 - 14h30</p>
 						</div>
 
@@ -198,7 +207,7 @@
 							<p class="card-text font-weight-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Mardi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Mardi</h6>
 							<p class="card-text">11h30 - 14h30</p>
 						</div>
 
@@ -207,7 +216,7 @@
 							<p class="card-text"><b>11h30 - 14h30</b></p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Mercredi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Mercredi</h6>
 							<p class="card-text">11h30 - 14h30</p>
 						</div>
 
@@ -216,7 +225,7 @@
 							<p class="card-text font-weight-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Jeudi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Jeudi</h6>
 							<p class="card-text">11h30 - 14h30</p>
 						</div>
 
@@ -225,7 +234,7 @@
 							<p class="card-text font-weight-bold">11h30 - 14h30 / 19h - 22h</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Vendredi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Vendredi</h6>
 							<p class="card-text">11h30 - 14h30 / 19h - 22h</p>
 						</div>
 
@@ -234,7 +243,7 @@
 							<p class="card-text font-weight-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Samedi</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Samedi</h6>
 							<p class="card-text">19h - 22h</p>
 						</div>
 
@@ -243,27 +252,26 @@
 							<p class="card-text font-weight-bold">Fermé</p>
 						</div>
 						<div v-else class="col-6 pb-3">
-							<h6  class="card-subtitle mb-2 text-muted">Dimanche</h6>
+							<h6 class="card-subtitle mb-2 text-muted">Dimanche</h6>
 							<p class="card-text">Fermé</p>
 						</div>
 
 					</div>
-					<img class="icone" src="@/assets/images/phoneModif.png" alt="Logo téléphone">&nbsp;<a
-						href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
+					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 ml-sm-3 localisation" id="localisation">
-		<div class="row">
-			<div class="little-card card col-11 col-sm-7" style="width: 18rem;">
+	<div class="container d-flex flex-column justify-content-center pt-4 pb-4 mt-4 mb-4" id="localisation">
+		<div class="row justify-content-center align-items-center">
+			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-1">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'location-dot']" class="mr-2" />
+						<fa :icon="['fas', 'location-dot']" class="me-2" />
 						<h5 class="card-title mb-1">Localisation</h5>
 					</div>
-					<h6 class="card-subtitle mb-2 text-muted mb-4">91140 Villebon-sur-Yvette,<br /> 4 Avenue de la
+					<h6 class="card-subtitle mb-2 text-muted">91140 Villebon-sur-Yvette,<br /> 4 Avenue de la
 						Baltique</h6>
 					<ul>
 						<li>
@@ -276,27 +284,25 @@
 							Accessible pour les personnes à mobilité réduite (PMR)
 						</li>
 					</ul>
-					<a href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir Google Maps</a>
+					<fa :icon="['fas', 'map']" class="phone-css me-2" /><a href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir Google Maps</a>
 				</div>
 			</div>
-			<div class="col-sm-5">
-				<iframe class="card-map-iframe"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4355.731786422988!2d2.2042835776347385!3d48.68603327130949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d7005f165f6b%3A0x719f7b1af10f72ad!2sPLAISIRS%20D&#39;AILLEURS!5e1!3m2!1sfr!2sfr!4v1731681092567!5m2!1sfr!2sfr"
-					style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			<div class="col-sm-6 order-2 order-sm-2">
+				<iframe class="d-block rounded-2 card-map-iframe-css" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4355.731786422988!2d2.2042835776347385!3d48.68603327130949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d7005f165f6b%3A0x719f7b1af10f72ad!2sPLAISIRS%20D&#39;AILLEURS!5e1!3m2!1sfr!2sfr!4v1731681092567!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</div>
 
-	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4 mr-sm-3" id="evenements">
-		<div class="row">
+	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="evenements">
+		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
 			</div>
-			<div class="little-card card col-11 col-sm-6 order-1 order-sm-2" style="width: 18rem;">
+			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
 					<div class="d-flex align-items-center pb-3">
-						<fa :icon="['fas', 'champagne-glasses']" class="mr-2" />
+						<fa :icon="['fas', 'champagne-glasses']" class="me-2" />
 						<h5 class="card-title mb-1">Événements</h5>
 					</div>
 					<h6 class="card-subtitle mb-2 text-muted">Réservation pour des événements</h6>
@@ -320,8 +326,10 @@
 							Terrasse de 60 places
 						</li>
 					</ul>
-					<div class="row h-0 justify-content-center align-items-center pt-2">
-						<router-link to="/public/Reservation" class="slogan-button boutonVert">Réserver en cliquant ici</router-link>
+					<div class="row justify-content-center align-items-center pt-2">
+						<div class="col-auto">
+							<router-link to="/public/Reservation" class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span  class="text-center">Réserver&nbsp;en<br />cliquant&nbsp;ici</span></router-link>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -341,8 +349,8 @@ import axios from 'axios';
 export default {
 	name: 'Home',
 	components: {
-        PublicMenu,
-    },
+		PublicMenu,
+	},
 	setup() {
 		onMounted(() => {
 			const carouselElement = document.getElementById('carouselExampleIndicators');
@@ -407,8 +415,8 @@ export default {
 					const date_fin = post.date_fin !== '0000-00-00' ? new Date(post.date_fin.replace(' ', 'T')) : null;
 					const dateToday = new Date();
 
-					if(date_debut && date_fin) {
-						if((date_debut <= dateToday && dateToday <= date_fin)) {
+					if (date_debut && date_fin) {
+						if ((date_debut <= dateToday && dateToday <= date_fin)) {
 							this.titre = post.titre;
 							this.sousTitre = post.sousTitre;
 							this.point1 = post.point1;
@@ -449,8 +457,14 @@ export default {
 .carousel-control-next {
 	opacity: 1;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100% 100%;
+}
 
-.img-redimensionnement {
+.img-redimensionnement-css {
 	max-height: 75vh;
 	width: 100%;
 	object-fit: cover;
@@ -462,17 +476,17 @@ export default {
 	background-color: #FFF;
 }
 
-.card-map-iframe {
-	width: 200%;
+.card-map-iframe-css {
+	width: 480px;
 	height: 300px;
 }
 
-.icone {
+.icone-css {
 	width: 15px;
 	margin-top: -2px !important;
 }
 
-.slogan-button {
+.button-css {
 	border: 1px solid;
 	border-color: #7985B1;
 	padding: 1.5% 2.8rem;
@@ -484,43 +498,44 @@ export default {
 	font-weight: 600;
 	cursor: pointer;
 }
-
-.slogan-button:hover {
+.button-css:hover {
 	background-color: #777;
 	text-decoration: none;
 }
 
-.boutonVert {
+.boutonVert-css {
 	background-color: #006600;
 }
-.boutonVert:hover {
+.boutonVert-css:hover {
 	background-color: #2b2f52;
 }
 
-.boutonJaune {
-	background-color: #DAA520;
-	border-color: white;
+.card-css {
+	width: 16rem;
 }
 
-@media screen and (max-width: 865px) {
-	.card-map-iframe {
-		width: 150%;
-	}
+.phone-css {
+	color: rgb(13, 110, 253);
+}
 
-	.slogan-button {
+@media screen and (max-width: 990px) {
+	.card-map-iframe-css {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.card-map-iframe-css {
+		width: 250px;
+	}
+	.button-css {
 		padding: 1.5% 0.5rem;
 		font-size: 100%;
 	}
 }
 
-@media screen and (max-width: 665px) {
-	.card-map-iframe {
-		width: 100%;
-	}
-}
-
 @media screen and (max-width: 575px) {
-	.little-card {
+	.little-card-css {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -528,18 +543,11 @@ export default {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
-
-	.localisation {
-		margin-bottom: 100px !important;
-	}
-
-	.card-map-iframe {
+	.card-map-iframe-css {
 		width: 100%;
-		height: 150%;
 	}
-
-	.slogan-button {
-		padding: 1.5% 1.5rem;
+	.card-css {
+		width: 95%;
 	}
 }
 </style>

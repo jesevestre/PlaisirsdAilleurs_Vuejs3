@@ -4,8 +4,8 @@
 			<router-link style="color: white" to="/authentification/Login">Accès admin</router-link>&nbsp;-&nbsp;
 		</span>
 		<span>
-			<img class="icone" src="@/assets/images/phoneBlanc.png" alt="Logo téléphone">&nbsp;<a style="color: white"
-				href="tel:+33625926100">06 25 92 61 00
+			<a style="color: white" href="tel:+33625926100">
+				<fa :icon="['fas', 'phone']" />06 25 92 61 00
 			</a>
 		</span>
 	</footer>

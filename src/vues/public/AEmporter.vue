@@ -345,8 +345,7 @@
 
 							<hr />
 
-							<div
-								class="form-group row d-flex flex-column justify-content-center align-items-center text-center pt-3">
+							<div class="form-group row d-flex flex-column justify-content-center align-items-center text-center pt-3">
 								<div class="col-12" v-if="isSubmitted2">
 									<div class="alert alert-warning" role="alert">
 										Les champs email et téléphone sont obligatoires :
@@ -368,8 +367,7 @@
 
 								</div>
 								<div class="col-12 pt-3" v-if="!isSubmitted3">
-									<button type="submit"
-										class="btn btn-primary font-weight-bold pl-5 pr-5">Envoyer</button>
+									<button type="submit" class="btn btn-primary font-weight-bold pl-5 pr-5">Envoyer</button>
 								</div>
 								<div class="col-12" v-else>
 									<div class="alert alert-success" role="alert">
@@ -572,8 +570,8 @@ export default {
 				this.nbrBarquetteAccompagnements = value;
 			}
 		},
-		ValiderCommande() {
 
+		ValiderCommande() {
 			if (this.estimationTotal == 0) {
 				this.isSubmitted1 = true;
 			} else {

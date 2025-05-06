@@ -5,12 +5,12 @@
 			<div class="row">
 				<div class="mb-3 col-md-6">
 					<label for="titre" class="form-label">Titre :</label>
-					<input type="text" class="form-control" v-model="posts.titre" id="titre">
+					<input type="text" class="form-control" v-model="posts.titre" id="titre" required>
 				</div>
 
 				<div class="mb-3 col-md-6">
 					<label for="sousTitre" class="form-label">Sous-titre :</label>
-					<input type="text" class="form-control" v-model="posts.sousTitre" id="sousTitre">
+					<input type="text" class="form-control" v-model="posts.sousTitre" id="sousTitre" required>
 				</div>
 
 				<div class="mb-3 col-md-6">
@@ -40,12 +40,12 @@
 
 				<div class="mb-3 col-md-6">
 					<label for="date_debut" class="form-label">Date de début :</label>
-					<input type="date" class="form-control" v-model="posts.date_debut" id="date_debut">
+					<input type="date" class="form-control" v-model="posts.date_debut" id="date_debut" required>
 				</div>
 
 				<div class="mb-3 col-md-6">
 					<label for="date_fin" class="form-label">Date de fin :</label>
-					<input type="date" class="form-control" v-model="posts.date_fin" id="date_fin">
+					<input type="date" class="form-control" v-model="posts.date_fin" id="date_fin" required>
 				</div>
 
 				<div class="mb-3 col-md-6">
@@ -62,6 +62,25 @@
 			</div>
 
 		</form>
+
+		<div class="col-12" v-if="success">
+			<div class="alert alert-success" role="alert">
+				Evenement mis à jour avec succès !
+			</div>
+		</div>
+
+		<div class="col-12" v-if="error">
+			<div class="alert alert-warning" role="alert">
+				Les champs titre, sous-titre et les dates sont obligatoires.
+			</div>
+		</div>
+
+		<div class="col-12" v-if="error2">
+			<div class="alert alert-danger" role="alert">
+				Erreur lors de l'envoi du formulaire, veuillez contacter l'administrateur.
+			</div>
+		</div>
+
 	</div>
 </template>
 
@@ -73,6 +92,11 @@ export default {
 
 	data() {
 		return {
+			loading: false,
+			success: false,
+			error: false,
+			error2: false,
+
 			posts: {
 				titre: '',
 				sousTitre: '',
@@ -85,8 +109,6 @@ export default {
 				date_debut: '',
 				date_fin: ''
 			},
-			loading: false,
-			error: null,
 		};
 	},
 	mounted() {
@@ -94,7 +116,6 @@ export default {
 
 		const dropContainer = this.$refs.dropContainer;
 		const fileInput = this.$refs.fileInput;
-
 		if (dropContainer && fileInput) {
 			dropContainer.addEventListener("dragover", (e) => {
 				e.preventDefault();
@@ -116,10 +137,10 @@ export default {
 			});
 		}
 	},
+
 	methods: {
 		async fetchPosts() {
 			this.loading = true;
-			this.error = null;
 
 			try {
 				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.posts ? `:${window.location.posts}` : ''}/`;
@@ -134,15 +155,46 @@ export default {
 		},
 
 		async majEvenement() {
-			try {
-				console.log("test");
-				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
-				await axios.put(rootUrl + 'backend/vue/controller..../posts/1', this.posts);
-				alert("Événement mis à jour avec succès !");
-			} catch (error) {
-				this.error = "Échec de la mise à jour.";
+			if (!this.posts.titre || !this.posts.sousTitre || !this.posts.date_debut || !this.posts.date_fin) {
+				this.success = false;
+				this.error = true;
+				this.error2 = false;
+				return;
 			}
-		}
+
+			const formData = new FormData();
+			formData.append('titre', this.posts.titre);
+			formData.append('sousTitre', this.posts.sousTitre);
+			formData.append('point1', this.posts.point1);
+			formData.append('point2', this.posts.point2);
+			formData.append('point3', this.posts.point3);
+			formData.append('point4', this.posts.point4);
+			formData.append('point5', this.posts.point5);
+			formData.append('date_debut', this.posts.date_debut);
+			formData.append('date_fin', this.posts.date_fin);
+
+			// Ajoute le fichier s'il est sélectionné
+			const file = this.$refs.fileInput.files[0];
+			if (file) {
+				formData.append('imageEvent', file);
+			}
+
+			try {
+				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
+				await axios.post(rootUrl + 'backend/controlleur/controlleur_majEvenement.php/posts', formData);
+				this.success = true;
+				this.error = false;
+				this.error2 = false;
+			} catch (error) {
+				this.success = false;
+				this.error = false;
+				this.error2 = true;
+				console.error('Erreur de sortie : ', error);
+				if (error.response) {
+					console.log('Réponse serveur :', error.response.data);
+				}
+			}
+		},
 	},
 }
 </script>
