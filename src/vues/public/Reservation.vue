@@ -10,7 +10,7 @@
 						<a href="tel:+33625926100" class="btn btn-success fw-bold text-white"><fa :icon="['fas', 'phone']" class="me-2" /> 06 25 92 61 00</a>
 					</div>
 					<div class="pt-5 mt-5 pb-5 mb-5">
-						<router-link class="btn btn-primary fw-bold" to="/">Retour</router-link>
+						<router-link class="btn btn-secondary fw-bold" to="/"><fa :icon="['fas', 'arrow-left']" class="me-2" /> Retour</router-link>
 					</div>
 				</div>
 			</div>

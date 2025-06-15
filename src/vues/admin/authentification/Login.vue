@@ -10,7 +10,7 @@
                             <input type="password" class="form-control-plaintext" id="password" placeholder="Mot de passe" v-model="admin.password"/>
                         </div>
                         <div class="col-4">
-                            <button type="submit" class="btn btn-success fw-bold mt-1 mb-1">Connexion</button>
+                            <button type="submit" class="btn btn-primary fw-bold mt-1 mb-1">Connexion <fa :icon="['fas', 'right-to-bracket']" class="me-2" /></button>
                         </div>
                     </div>
                     <div class="form-group row align-items-center mb-4">
@@ -20,7 +20,7 @@
                     </div>
                 </form>
                 <div class="pt-5 mt-5 pb-5 mb-5 text-center">
-                    <router-link class="btn btn-primary fw-bold" to="/">Retour</router-link>
+                    <router-link class="btn btn-secondary fw-bold" to="/"><fa :icon="['fas', 'arrow-left']" class="me-2" /> Retour</router-link>
                 </div>
             </div>
         </div>
@@ -68,5 +68,9 @@ export default {
 <style scoped>
 .admin {
 	min-height: 89.05vh;
+}
+.form-control-plaintext {
+    background-color: white;
+    border-color: white;
 }
 </style>

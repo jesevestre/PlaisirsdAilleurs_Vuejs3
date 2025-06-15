@@ -1,86 +1,87 @@
 <template>
-	<div class="container mt-5 mb-5">
-		<form @submit.prevent="majEvenement">
+	<div class="private">
+		<div class="container mt-5 mb-5">
 
-			<div class="row">
-				<div class="mb-3 col-md-6">
-					<label for="titre" class="form-label">Titre :</label>
-					<input type="text" class="form-control" v-model="posts.titre" id="titre" required>
+			<form @submit.prevent="majEvenement">
+				<div class="row">
+					<div class="mb-3 col-md-6">
+						<label for="titre" class="form-label">Titre :</label>
+						<input type="text" class="form-control" v-model="posts.titre" id="titre" required>
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="sousTitre" class="form-label">Sous-titre :</label>
+						<input type="text" class="form-control" v-model="posts.sousTitre" id="sousTitre" required>
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="point1" class="form-label">Point 1 :</label>
+						<input type="text" class="form-control" v-model="posts.point1" id="point1">
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="point2" class="form-label">Point 2 :</label>
+						<input type="text" class="form-control" v-model="posts.point2" id="point2">
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="point3" class="form-label">Point 3 :</label>
+						<input type="text" class="form-control" v-model="posts.point3" id="point3">
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="point4" class="form-label">Point 4 :</label>
+						<input type="text" class="form-control" v-model="posts.point4" id="point4">
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="point5" class="form-label">Point 5 :</label>
+						<input type="text" class="form-control" v-model="posts.point5" id="point5">
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="date_debut" class="form-label">Date de début :</label>
+						<input type="date" class="form-control" v-model="posts.date_debut" id="date_debut" required>
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label for="date_fin" class="form-label">Date de fin :</label>
+						<input type="date" class="form-control" v-model="posts.date_fin" id="date_fin" required>
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label ref="dropContainer" for="imageEvent" class="drop-container form-label" id="dropcontainer">
+							<span class="drop-title">Déposez l'image ici :</span>
+							<input ref="fileInput" type="file" class="form-control" name="imageEvent" id="imageEvent"
+								accept="image/*">
+						</label>
+					</div>
 				</div>
 
-				<div class="mb-3 col-md-6">
-					<label for="sousTitre" class="form-label">Sous-titre :</label>
-					<input type="text" class="form-control" v-model="posts.sousTitre" id="sousTitre" required>
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary mt-5 mb-5">Valider <fa :icon="['fas', 'save']" class="phone-css ms-2 me-1" /></button>
 				</div>
+			</form>
 
-				<div class="mb-3 col-md-6">
-					<label for="point1" class="form-label">Point 1 :</label>
-					<input type="text" class="form-control" v-model="posts.point1" id="point1">
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="point2" class="form-label">Point 2 :</label>
-					<input type="text" class="form-control" v-model="posts.point2" id="point2">
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="point3" class="form-label">Point 3 :</label>
-					<input type="text" class="form-control" v-model="posts.point3" id="point3">
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="point4" class="form-label">Point 4 :</label>
-					<input type="text" class="form-control" v-model="posts.point4" id="point4">
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="point5" class="form-label">Point 5 :</label>
-					<input type="text" class="form-control" v-model="posts.point5" id="point5">
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="date_debut" class="form-label">Date de début :</label>
-					<input type="date" class="form-control" v-model="posts.date_debut" id="date_debut" required>
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label for="date_fin" class="form-label">Date de fin :</label>
-					<input type="date" class="form-control" v-model="posts.date_fin" id="date_fin" required>
-				</div>
-
-				<div class="mb-3 col-md-6">
-					<label ref="dropContainer" for="imageEvent" class="drop-container form-label" id="dropcontainer">
-						<span class="drop-title">Déposez l'image ici :</span>
-						<input ref="fileInput" type="file" class="form-control" name="imageEvent" id="imageEvent"
-							accept="image/*">
-					</label>
+			<div class="col-12" v-if="success">
+				<div class="alert alert-success" role="alert">
+					Évenement mis à jour avec succès !
 				</div>
 			</div>
 
-			<div class="text-center mt-5 mb-5">
-				<button type="submit" class="btn btn-primary mt-5 mb-5">Mettre à jour</button>
+			<div class="col-12" v-if="error">
+				<div class="alert alert-warning" role="alert">
+					Les champs titre, sous-titre et les dates sont obligatoires.
+				</div>
 			</div>
 
-		</form>
-
-		<div class="col-12" v-if="success">
-			<div class="alert alert-success" role="alert">
-				Evenement mis à jour avec succès !
+			<div class="col-12" v-if="error2">
+				<div class="alert alert-danger" role="alert">
+					Erreur lors de l'envoi du formulaire, veuillez contacter l'administrateur.
+				</div>
 			</div>
+
 		</div>
-
-		<div class="col-12" v-if="error">
-			<div class="alert alert-warning" role="alert">
-				Les champs titre, sous-titre et les dates sont obligatoires.
-			</div>
-		</div>
-
-		<div class="col-12" v-if="error2">
-			<div class="alert alert-danger" role="alert">
-				Erreur lors de l'envoi du formulaire, veuillez contacter l'administrateur.
-			</div>
-		</div>
-
 	</div>
 </template>
 
@@ -200,10 +201,6 @@ export default {
 </script>
 
 <style>
-.error {
-	color: red;
-}
-
 .drop-container {
   border: 2px dashed #aaa;
   padding: 20px;

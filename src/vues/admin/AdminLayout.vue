@@ -52,3 +52,17 @@ export default {
 
 };
 </script>
+
+<style>
+.error {
+	color: red;
+}
+
+.private {
+	min-height: 82.35vh;
+}
+
+.phone-css {
+	color: #FFF;
+}
+</style>
