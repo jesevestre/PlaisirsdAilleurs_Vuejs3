@@ -10,4 +10,4 @@ library.add(fas);
 const app = createApp(App);
 app.component('fa', FontAwesomeIcon);
 app.use(router);
-app.mount('#app');;
+app.mount('#app');

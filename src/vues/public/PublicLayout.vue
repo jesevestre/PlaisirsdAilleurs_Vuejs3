@@ -1,9 +1,7 @@
 <template>
-    <div class="public">
-        <PublicTitreMenu/>
-        <router-view/>
-        <PublicFooter/>
-    </div>
+    <PublicTitreMenu/>
+    <router-view/>
+    <PublicFooter/>
 </template>
 
 <script>

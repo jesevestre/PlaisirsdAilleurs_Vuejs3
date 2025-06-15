@@ -1,14 +1,13 @@
 <template>
-    <div class="admin">
-        <AdminTitreMenu />
-        <router-view />
-        <PublicFooter />
-    </div>
+    <AdminTitreMenu />
+    <router-view />
+    <PublicFooter />
 </template>
 
 <script>
 import AdminTitreMenu from '@/components/admin/AdminTitreMenu.vue';
 import PublicFooter from '@/components/Footer.vue';
+
 /* Gestion session expirée */
 import { accountService } from '@/_services';
 

@@ -53,19 +53,18 @@ const router = createRouter({
 	},
 });
 
-// Vérouillage de la partie admin (token)
 router.beforeEach((to, form, next) => {
-	if(to.matched[0].name == 'admin'){
+	// Vérouillage de la partie admin (token)
+	if(to.matched[0].name == 'admin') {
 		authGuard();
 	}
 	next();
-})
 
-// Redirection si token valide, on saute la connexion
-router.beforeEach((to, form, next) => {
-	if(to.matched[0].name == 'Login' && authGuardLogin() == true){
+	// Redirection si token valide, on saute la connexion
+	if(to.matched[0].name == 'Login' && authGuardLogin() == true) {
 		router.push('/admin/GestionEvenement');
 	}
+
 	next();
 })
 

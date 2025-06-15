@@ -3,8 +3,9 @@
 	<PublicMenu />
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-		<ol class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+				class="active"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
@@ -13,7 +14,7 @@
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"></button>
-		</ol>
+		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img class="img-redimensionnement-css d-block w-100" src="@/assets/photosCaroussel/2.jpg"
@@ -52,11 +53,13 @@
 					alt="Image de présentation du buffet">
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+			data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Précédent</span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+			data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Suivant</span>
 		</button>
@@ -104,7 +107,8 @@
 	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="menu">
 		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/2.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/2.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
@@ -132,7 +136,8 @@
 							Plancha
 						</li>
 					</ul>
-					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
+					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100"
+						class="card-link">06 25 92 61 00</a>
 				</div>
 			</div>
 		</div>
@@ -170,13 +175,16 @@
 					</div> -->
 					<div class="row justify-content-center align-items-center pt-2">
 						<div class="col-auto">
-							<router-link to="/public/Reservation" class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span class="text-center">Commander&nbsp;en<br />&nbsp;cliquant&nbsp;ici</span></router-link>
+							<router-link to="/public/Reservation"
+								class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span
+									class="text-center">Commander&nbsp;en<br />&nbsp;cliquant&nbsp;ici</span></router-link>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 order-2 order-sm-2">
-				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/3.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/3.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 		</div>
 	</div>
@@ -184,7 +192,8 @@
 	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="horaires">
 		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/1.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/1.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="card-css little-card-css card col-11 col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
@@ -194,8 +203,8 @@
 					</div>
 					<div class="row">
 						<div v-if="jourDeLaSemaine == 'lundi'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Lundi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30</p>
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Lundi</h6>
+							<p class="card-text fw-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Lundi</h6>
@@ -203,8 +212,8 @@
 						</div>
 
 						<div v-if="jourDeLaSemaine == 'mardi'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Mardi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30</p>
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Mardi</h6>
+							<p class="card-text fw-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Mardi</h6>
@@ -220,9 +229,9 @@
 							<p class="card-text">11h30 - 14h30</p>
 						</div>
 
-						<div v-if="jourDeLaSemaine == 'jeudi'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Jeudi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30</p>
+						<div v-if="jourDeLaSemaine == 'jeudi'" class="col-6 pb-3 fw-bold">
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Jeudi</h6>
+							<p class="card-text fw-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Jeudi</h6>
@@ -230,8 +239,8 @@
 						</div>
 
 						<div v-if="jourDeLaSemaine == 'vendredi'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Vendredi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30 / 19h - 22h</p>
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Vendredi</h6>
+							<p class="card-text fw-bold">11h30 - 14h30 / 19h - 22h</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Vendredi</h6>
@@ -239,8 +248,8 @@
 						</div>
 
 						<div v-if="jourDeLaSemaine == 'samedi'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Samedi</h6>
-							<p class="card-text font-weight-bold">11h30 - 14h30</p>
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Samedi</h6>
+							<p class="card-text fw-bold">11h30 - 14h30</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Samedi</h6>
@@ -248,8 +257,8 @@
 						</div>
 
 						<div v-if="jourDeLaSemaine == 'dimanche'" class="col-6 pb-3">
-							<h6 class="card-subtitle mb-2 text-muted font-weight-bold">Dimanche</h6>
-							<p class="card-text font-weight-bold">Fermé</p>
+							<h6 class="card-subtitle mb-2 text-muted fw-bold">Dimanche</h6>
+							<p class="card-text fw-bold">Fermé</p>
 						</div>
 						<div v-else class="col-6 pb-3">
 							<h6 class="card-subtitle mb-2 text-muted">Dimanche</h6>
@@ -257,7 +266,8 @@
 						</div>
 
 					</div>
-					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100" class="card-link">06 25 92 61 00</a>
+					<fa :icon="['fas', 'phone']" class="phone-css me-2" /><a href="tel:+33625926100"
+						class="card-link">06 25 92 61 00</a>
 				</div>
 			</div>
 		</div>
@@ -284,12 +294,17 @@
 							Accessible pour les personnes à mobilité réduite (PMR)
 						</li>
 					</ul>
-					<fa :icon="['fas', 'map']" class="phone-css me-2" /><a href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir Google Maps</a>
+					<fa :icon="['fas', 'map']" class="phone-css me-2" /><a
+						href="https://maps.app.goo.gl/yGJehcPyTSjADKdf9" class="card-link" target="_blank">Ouvrir Google
+						Maps</a>
 				</div>
 			</div>
 
 			<div class="col-sm-6 order-2 order-sm-2">
-				<iframe class="d-block rounded-2 card-map-iframe-css" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4355.731786422988!2d2.2042835776347385!3d48.68603327130949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d7005f165f6b%3A0x719f7b1af10f72ad!2sPLAISIRS%20D&#39;AILLEURS!5e1!3m2!1sfr!2sfr!4v1731681092567!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe class="d-block rounded-2 card-map-iframe-css"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4355.731786422988!2d2.2042835776347385!3d48.68603327130949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d7005f165f6b%3A0x719f7b1af10f72ad!2sPLAISIRS%20D&#39;AILLEURS!5e1!3m2!1sfr!2sfr!4v1731681092567!5m2!1sfr!2sfr"
+					style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</div>
@@ -297,7 +312,8 @@
 	<div class="container d-flex flex-row pt-4 pb-4 mt-4 mb-4" id="evenements">
 		<div class="row justify-content-center">
 			<div class="col-sm-6 order-2 order-sm-1">
-				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/7.jpg" alt="Image de présentation du buffet">
+				<img class="d-block w-100 rounded-2" src="@/assets/photosCaroussel/7.jpg"
+					alt="Image de présentation du buffet">
 			</div>
 			<div class="card-css little-card-css card col-sm-6 order-1 order-sm-2">
 				<div class="card-body">
@@ -328,7 +344,9 @@
 					</ul>
 					<div class="row justify-content-center align-items-center pt-2">
 						<div class="col-auto">
-							<router-link to="/public/Reservation" class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span  class="text-center">Réserver&nbsp;en<br />cliquant&nbsp;ici</span></router-link>
+							<router-link to="/public/Reservation"
+								class="button-css boutonVert-css d-flex flex-column justify-content-center align-items-center rounded-2"><span
+									class="text-center">Réserver&nbsp;en<br />cliquant&nbsp;ici</span></router-link>
 						</div>
 					</div>
 				</div>
@@ -341,16 +359,18 @@
 
 <script>
 import PublicMenu from '@/components/public/PublicMenu.vue';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 /* Partie bdd */
 import axios from 'axios';
 
 export default {
 	name: 'Home',
+
 	components: {
 		PublicMenu,
 	},
+
 	setup() {
 		onMounted(() => {
 			const carouselElement = document.getElementById('carouselExampleIndicators');
@@ -358,8 +378,25 @@ export default {
 				interval: 6000,
 				ride: 'carousel'
 			});
-
 		});
+
+		const jourDeLaSemaine = ref('');
+		onMounted(() => {
+			const jours = [
+				'dimanche',
+				'lundi',
+				'mardi',
+				'mercredi',
+				'jeudi',
+				'vendredi',
+				'samedi',
+			];
+			jourDeLaSemaine.value = jours[new Date().getDay()];
+		});
+		return {
+			jourDeLaSemaine
+		};
+
 	},
 	/* Partie bdd */
 	data() {
@@ -381,11 +418,14 @@ export default {
 			afficher: false,
 		};
 	},
-	mounted() {
-		this.enregistrerVisiteur();
-		this.fetchPosts();
-	},
+
 	methods: {
+		getJourDeLaSemaine() {
+			const jours = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+			const aujourdHui = new Date();
+			return jours[aujourdHui.getDay()];
+		},
+
 		async enregistrerVisiteur() {
 			try {
 				const rootUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}/`;
@@ -436,14 +476,6 @@ export default {
 			}
 		},
 	},
-
-	computed: {
-		jourDeLaSemaine() {
-			const jours = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
-			const aujourdHui = new Date();
-			return jours[aujourdHui.getDay()];
-		},
-	},
 }
 </script>
 
@@ -457,11 +489,12 @@ export default {
 .carousel-control-next {
 	opacity: 1;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 3rem;
-  height: 3rem;
-  background-size: 100% 100%;
+	width: 3rem;
+	height: 3rem;
+	background-size: 100% 100%;
 }
 
 .img-redimensionnement-css {
@@ -498,6 +531,7 @@ export default {
 	font-weight: 600;
 	cursor: pointer;
 }
+
 .button-css:hover {
 	background-color: #777;
 	text-decoration: none;
@@ -506,6 +540,7 @@ export default {
 .boutonVert-css {
 	background-color: #006600;
 }
+
 .boutonVert-css:hover {
 	background-color: #2b2f52;
 }
@@ -528,6 +563,7 @@ export default {
 	.card-map-iframe-css {
 		width: 250px;
 	}
+
 	.button-css {
 		padding: 1.5% 0.5rem;
 		font-size: 100%;
@@ -543,9 +579,11 @@ export default {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+
 	.card-map-iframe-css {
 		width: 100%;
 	}
+
 	.card-css {
 		width: 95%;
 	}

@@ -5,7 +5,7 @@
 		</span>
 		<span>
 			<a style="color: white" href="tel:+33625926100">
-				<fa :icon="['fas', 'phone']" />06 25 92 61 00
+				06 25 92 61 00
 			</a>
 		</span>
 	</footer>
